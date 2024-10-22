@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edge Case Testing</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .label-wide {
+            width: 50px;
+            display: inline-block;
+        }
+        .td-wide {
+            width: 100px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-center">Edge Case Testing Report</h2>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>File Comparison</th>
+                    <th>Record Matching</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>EC01</td>
+                    <td>Edge Case 1</td>
+                    <td>
+                        <table class="table table-bordered" style="margin: 0;">
+                            <tr>
+                                <td>
+                                    <span class="td-wide">SS Processed:</span>
+                                    <a href="#" class="label label-success label-wide">Exists</a>
+                                    <br>
+                                    <span class="td-wide">SS Err Folder:</span>
+                                    <a class="label label-wide label-warning" href="#">N/A</a>
+                                </td>
+                                <td>
+                                    <span class="td-wide">JV Processed:</span>
+                                    <a href="#" class="label label-danger label-wide">None</a>
+                                    <br>
+                                    <span class="td-wide">JV Err Folder:</span>
+                                    <a href="#" class="label label-success label-wide">Exists</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        First Matched: <span class="label label-success">True</span><br>
+                        Second Matched: <span class="label label-danger">False</span>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>EC02</td>
+                    <td>Edge Case 2</td>
+                    <td>
+                        <table class="table table-bordered" style="margin: 0;">
+                            <tr>
+                                <td>
+                                    <span class="td-wide">SS Processed:</span>
+                                    <a href="#" class="label label-success label-wide">Exists</a>
+                                    <br>
+                                    <span class="td-wide">SS Err Folder:</span>
+                                    <a class="label label-wide label-warning" href="#">N/A</a>
+                                </td>
+                                <td>
+                                    <span class="td-wide">JV Processed:</span>
+                                    <a href="#" class="label label-danger label-wide">None</a>
+                                    <br>
+                                    <span class="td-wide">JV Err Folder:</span>
+                                    <a href="#" class="label label-success label-wide">Exists</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        First Matched: <span class="label label-success">True</span><br>
+                        Second Matched: <span class="label label-danger">False</span>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>EC03</td>
+                    <td>Edge Case 3</td>
+                    <td>
+                        <table class="table table-bordered" style="margin: 0;">
+                            <tr>
+                                <td>
+                                    <span class="td-wide">SS Processed:</span>
+                                    <a href="#" class="label label-success label-wide">Exists</a>
+                                    <br>
+                                    <span class="td-wide">SS Err Folder:</span>
+                                    <a class="label label-wide label-warning" href="#">N/A</a>
+                                </td>
+                                <td>
+                                    <span class="td-wide">JV Processed:</span>
+                                    <a href="#" class="label label-danger label-wide">None</a>
+                                    <br>
+                                    <span class="td-wide">JV Err Folder:</span>
+                                    <a href="#" class="label label-success label-wide">Exists</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        First Matched: <span class="label label-success">True</span><br>
+                        Second Matched: <span class="label label-danger">False</span>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

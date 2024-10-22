@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edge Case Testing</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .label-wide {
+            width: 50px;
+            display: inline-block;
+        }
+        .td-wide {
+            width: 100px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-center">Edge Case Testing Report</h2>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>File Comparison</th>
+                    <th>Record Matching</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for report in reports %}
+                <tr>
+                    <td>{{ report.code }}</td>
+                    <td>{{ report.description }}</td>
+                    <td>
+                        <table class="table table-bordered" style="margin: 0;">
+                            <tr>
+                                <td>
+                                    <span class="td-wide">SS Processed:</span>
+                                    <a href="#" class="label label-{{ 'success' if report.col1 else 'danger' }} label-wide">{{ ('Exists' if report.col1 else 'None') }}</a>
+                                    <br>
+                                    <span class="td-wide">SS Err Folder:</span>
+                                    <a class="label label-wide label-warning" href="#">N/A</a>
+                                </td>
+                                <td>
+                                    <span class="td-wide">JV Processed:</span>
+                                    <a href="#" class="label label-{{ 'success' if report.col2 else 'danger' }} label-wide">{{ ('Exists' if report.col2 else 'None') }}</a>
+                                    <br>
+                                    <span class="td-wide">JV Err Folder:</span>
+                                    <a href="#" class="label label-{{ 'success' if report.col3 else 'danger' }} label-wide">{{ ('Exists' if report.col3 else 'None') }}</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        First Matched: <span class="label label-{{ 'success' if report.firstMatched else 'danger' }}">{{ report.firstMatched }}</span><br>
+                        Second Matched: <span class="label label-{{ 'success' if report.secondMatched else 'danger' }}">{{ report.secondMatched }}</span>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
